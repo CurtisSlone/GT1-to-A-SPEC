@@ -1,0 +1,24 @@
+# GT1's Special Stage Route 11 in GT2 A-Spec v1.2.1, in place of Machine Test's Max Speed course (maxspeed).
+# Build: gt2-tools patch build aspec-ssr11.toml --base "Gran Turismo 2 A-Spec (v1.2.1).cue" --source GT1FILES --out DIR
+# GT1FILES: the files of your own Gran Turismo (USA v1.1, SCUS-94194) disc (COURSE.DAT, SYSTEM.DAT, BG.DAT).
+# docs/gt2/PATCH-RECIPES.md. The stock game runs it (2 MB, no port fixes): --target ps1.
+name = "GT2 A-Spec v1.2.1 + Special Stage Route 11 (Max Speed slot)"
+
+[base]
+# Gran Turismo 2 A-Spec (v1.2.1).bin
+sha256 = "94866e3dbcf666cfc3dc2275c8dba1fa415a626a44ed7a80600238cefa1a599f"
+
+[course]
+from = "gt1"
+course = "ssr11"
+slot = "maxspeed"
+name = "Special Stage Route 11"
+# GT2's Special Stage Route 5 night sky (dawn), its car lighting and night bits
+sky = "highway"
+target = "ps1"
+pit = "keep"
+
+[output]
+bin = "Gran Turismo 2 A-Spec (v1.2.1) SSR11.bin"
+cue = "Gran Turismo 2 A-Spec (v1.2.1) SSR11.cue"
+xdelta = "GT2-A-Spec-SSR11.xdelta"
